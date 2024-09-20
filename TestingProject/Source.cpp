@@ -4,12 +4,7 @@
 class Vector
 {
 public:
-	Vector()
-	{
-		X = 0;
-		Y = 0;
-		Z = 0;
-	}
+	Vector() : X(0), Y(0), Z(0) {}
 
 	explicit Vector(float num)
 	{
@@ -23,7 +18,6 @@ public:
 		this->X = x;
 		this->Y = y;
 		this->Z = z;
-		//Info = new std::string("important!");
 	}
 
 	Vector(const Vector& other)
@@ -32,13 +26,11 @@ public:
 		X = other.X;
 		Y = other.Y;
 		Z = other.Z;
-		//Info = new std::string(*(other.Info));
 	}
 
 	~Vector()
 	{
 		std::cout << "destructor calling \n";
-		delete Info;
 	}
 
 	Vector& operator=(Vector& other)
@@ -47,12 +39,6 @@ public:
 		X = other.X;
 		Y = other.Y;
 		Z = other.Z;
-
-		if (other.Info)
-		{
-			if (Info) delete Info;
-			Info = new std::string(*(other.Info));
-		}
 
 		return (*this);
 	}
@@ -66,13 +52,13 @@ public:
 
 	friend Vector operator-(const Vector& A, const Vector& B);
 
-	friend Vector operator*(const Vector& A, int B);
+	friend Vector operator*(const Vector& A, float B);
 
 	friend std::ostream& operator<<(std::ostream& out, const Vector& v);
 
 	friend std::istream& operator>>(std::istream& in, Vector& v);
 
-	friend bool operator>(const Vector& A, const Vector& B);
+	friend bool operator>(Vector& A, Vector& B);
 
 	float operator[](int index)
 	{
@@ -97,7 +83,6 @@ private:
 	float X;
 	float Y;
 	float Z;
-	std::string* Info;
 };
 
 Vector operator+(const Vector& A, const Vector& B)
@@ -110,7 +95,7 @@ Vector operator-(const Vector& A, const Vector& B)
 	return Vector(A.X - B.X, A.Y - B.Y, A.Z - B.Z);
 }
 
-Vector operator*(const Vector& A, int B)
+Vector operator*(const Vector& A, float B)
 {
 	return Vector(A.X * B, A.Y * B, A.Z * B);
 }
@@ -127,12 +112,12 @@ std::istream& operator>>(std::istream& in, Vector& v)
 	return in;
 }
 
-bool operator>(const Vector& A, const Vector& B)
+bool operator>(Vector& A, Vector& B)
 {
-	return false;
+	return  float(A) > float(B);
 }
 
-int main()
+/*int main()
 {
 	Vector v1(1, 1, 1);
 	Vector v2(2, 2, 2);
@@ -140,4 +125,5 @@ int main()
 	std::cout << v2<< "\n";
 	v3 = v2 = v1;
 	std::cout << v3 << "\n";
-}
+
+}*/
