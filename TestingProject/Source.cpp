@@ -11,11 +11,50 @@ public:
 		Z = 0;
 	}
 
+	explicit Vector(float num)
+	{
+		X = num;
+		Y = num;
+		Z = num;
+	}
+
 	Vector(float x, float y, float z)
 	{
 		this->X = x;
 		this->Y = y;
 		this->Z = z;
+		//Info = new std::string("important!");
+	}
+
+	Vector(const Vector& other)
+	{
+		std::cout << "\n Copy constructor \n";
+		X = other.X;
+		Y = other.Y;
+		Z = other.Z;
+		//Info = new std::string(*(other.Info));
+	}
+
+	~Vector()
+	{
+		std::cout << "destructor calling \n";
+		delete Info;
+	}
+
+	Vector& operator=(Vector& other)
+	{
+		std::cout << "operator =\n";
+		X = other.X;
+		Y = other.Y;
+		Z = other.Z;
+
+		if (other.Info)
+		{
+			if (Info) delete Info;
+			Info = new std::string(*(other.Info));
+		}
+
+		return (*this);
 	}
 
 	operator float()
@@ -58,6 +97,7 @@ private:
 	float X;
 	float Y;
 	float Z;
+	std::string* Info;
 };
 
 Vector operator+(const Vector& A, const Vector& B)
@@ -94,19 +134,10 @@ bool operator>(const Vector& A, const Vector& B)
 
 int main()
 {
-	Vector v1(0, 1, 2);
-	Vector v2(3, 4, 5);
+	Vector v1(1, 1, 1);
+	Vector v2(2, 2, 2);
 	Vector v3;
-	Vector v4;
-	Vector v5;
-	int Value = 5;
-
-	v3 = v2 - v1;
-	v4 = v2 * Value;
-
-	std::cout << v3 << '\n';
-	std::cout << "v3 length " << float(v3) << '\n';
-	std::cout << v4 << '\n';
-	std::cin >> v5;
-	std::cout <<v5;
+	std::cout << v2<< "\n";
+	v3 = v2 = v1;
+	std::cout << v3 << "\n";
 }
