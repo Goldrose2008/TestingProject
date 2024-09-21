@@ -72,10 +72,10 @@ public:
 	}
 };
 
-int main()
+/*int main()
 {
 	Point P(3, 4);
 	Point V(2, 5);
 
 	V = P;
-}
+}*/
