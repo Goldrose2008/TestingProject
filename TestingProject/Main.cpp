@@ -217,7 +217,7 @@ public:
 	}
 };
 
-int main()
+/*int main()
 {
 	Item* Sword = new Item("Sword");
 	Player* NewPlayerA = new Player("Vasya", Vector(1, 0, 0));
@@ -228,4 +228,4 @@ int main()
 	PlayersAB.AddPlayerToParty(NewPlayerB);
 	PlayersAB.ShowAllPlayerInfo();
 	
-}
+}*/
