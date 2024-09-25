@@ -132,7 +132,7 @@ float getHighestPower(std::vector<Vehicle*> vector)
 	return Power;
 }
 
-int main()
+/*int main()
 {
 	Car c(Engine(150), Wheel(17), Wheel(17), Wheel(18), Wheel(18), 150);
 	std::cout << c << '\n';
@@ -158,4 +158,4 @@ int main()
 	{
 		delete v[i];
 	}
-};
+};*/

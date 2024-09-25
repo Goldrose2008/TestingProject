@@ -129,7 +129,7 @@
   <ItemGroup>
     <ClCompile Include="2_4_PracticalWork.cpp" />
     <ClCompile Include="4_11_PracticalWork.cpp" />
-    <ClCompile Include="4_VirtualFunctions.cpp" />
+    <ClCompile Include="5_10_PracticalWork.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

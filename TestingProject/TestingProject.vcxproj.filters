@@ -21,10 +21,10 @@
     <ClCompile Include="2_4_PracticalWork.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="4_VirtualFunctions.cpp">
+    <ClCompile Include="4_11_PracticalWork.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="4_11_PracticalWork.cpp">
+    <ClCompile Include="5_10_PracticalWork.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
