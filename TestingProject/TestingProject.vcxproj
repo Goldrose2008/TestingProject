@@ -131,6 +131,7 @@
     <ClCompile Include="4_11_PracticalWork.cpp" />
     <ClCompile Include="5_10_PracticalWork.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="12_5_PracticalWork.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -9,14 +9,14 @@ private:
 public:
 	Fraction(int numerator, int denominator) : m_numerator(numerator), m_denominator(denominator)
 	{
-		if (denominator <= 0)
+		if (denominator == 0)
 		{
 			throw std::runtime_error("The denominator cannot be zero!");
 		}			
 	}
 };
 
-int main()
+/*int main()
 {
 	try
 	{
@@ -39,5 +39,5 @@ int main()
 	{
 		std::cerr << "Error: " << exception.what() << '\n';
 	}
-}
+}*/
 
