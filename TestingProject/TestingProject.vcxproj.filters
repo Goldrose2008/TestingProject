@@ -30,5 +30,8 @@
     <ClCompile Include="12_5_PracticalWork.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="13_5_PracticalWork.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
